@@ -6,7 +6,7 @@ function App() {
   const [data, setData] = useState<DataType[] | any>([])
   const fetchData = async (e: any) => {
     e.preventDefault()
-    const res = await axios.get(`http://localhost:8000/api/v1/sampledata/${e.target[0].value}`)
+    const res = await axios.get(`https://searcher-backend.vercel.app/api/v1/sampledata/${e.target[0].value}`)
     setData(res.data.data)
   }
   return (
